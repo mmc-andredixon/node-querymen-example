@@ -7,7 +7,6 @@ const port = 4000;
 
 var querymen = require('querymen');
 
-
 var uri = "mongodb://localhost:27017/my_work_place";
 
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
@@ -37,72 +36,6 @@ router.route("/insertdata").post(function (req, res) {
             country: faker.address.country(),
         });
     }
-
-
-
-    // var data = [
-    //     {
-    //         name: "John",
-    //         age: 21,
-    //         location: "New York"
-    //     },
-    //     {
-    //         name: "Smith",
-    //         age: 27,
-    //         location: "Texas"
-    //     },
-    //     {
-    //         name: "Lisa",
-    //         age: 23,
-    //         location: "Chicago"
-    //     },
-    //     {
-    //         name: "Brown",
-    //         age: 21,
-    //         location: "Jamaica"
-    //     },
-    //     {
-    //         name: "Jack",
-    //         age: 27,
-    //         location: "Kitchener"
-    //     },
-    //     {
-    //         name: "Lisa",
-    //         age: 23,
-    //         location: "Waterloo"
-    //     },
-    //     {
-    //         name: "Victoria",
-    //         age: 23,
-    //         location: "Waterloo"
-    //     },
-    //     {
-    //         name: "Stacie",
-    //         age: 35,
-    //         location: "Cambridge"
-    //     },
-    //     {
-    //         name: "Nicholas",
-    //         age: 32,
-    //         location: "Waterloo"
-    //     },
-    //     {
-    //         name: "Navi",
-    //         age: 31,
-    //         location: "London"
-    //     },
-    //     {
-    //         name: "London",
-    //         age: 31,
-    //         location: "Toronto"
-    //     },
-    //     {
-    //         name: "Pam",
-    //         age: 37,
-    //         location: "London"
-    //     }
-    // ];
-
 
     employees.insertMany(data, function (err, result) {
         if (err) {
